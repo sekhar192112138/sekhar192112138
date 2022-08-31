@@ -1,0 +1,50 @@
+#include<stdio.h>
+
+int main()
+{
+    int a,b;
+    
+    float tax;
+  
+   printf("enter your salary:");
+   scanf("%d", &a);
+   printf("1 for male\n");
+   printf("2 for female\n");
+   printf("enter the gender: ");
+   scanf("%d",& b);
+    
+    if(a<=150000)
+    {
+        printf( "no tax");
+        
+    }
+    else if(a>=150001 && a<=300000)
+    { 
+        if (b==1){
+        tax= a*10/100;
+        printf("%f" , tax);}
+        else if (b==2){
+        tax= a*5/100;
+        printf("%f" , tax);}
+    }
+    else if(a>=300001 && a<=500000)
+    {
+        if (b==1){
+        tax= a*20/100;
+        printf("%f" , tax);}
+        else if (b==2){
+        tax= a*15/100;
+        printf("%f" , tax);}
+    
+        
+    }
+        
+    else
+    { 
+        tax= a*25/100;
+        printf("%f", tax);
+    }
+    
+        
+    
+}
