@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+int x,y,i;
+printf("enter the number\n");
+scanf("%d",&y);
+scanf("%d",&x);
+for (i=1;i<=x;i++)
+printf("%d * %d = %d\n",i,y,i*y);
+getch();
+}
