@@ -1,0 +1,83 @@
+#include <stdio.h>
+typedef struct complex {
+    float real;
+    float imag;
+} complex;
+
+complex add(complex n1, complex n2);
+
+int main() {
+    complex n1, n2, result;
+
+    printf("For 1st complex number \n");
+    printf("Enter the real and imaginary parts: ");
+    scanf("%f %f", &n1.real, &n1.imag);
+    printf("\nFor 2nd complex number \n");
+    printf("Enter the real and imaginary parts: ");
+    scanf("%f %f", &n2.real, &n2.imag);
+
+    result = add(n1, n2);
+
+    printf("Sum = %.1f + %.1fi", result.real, result.imag);
+    return 0;
+}
+
+complex add(complex n1, complex n2) {
+    complex temp;
+    temp.real = n1.real + n2.real;
+    temp.imag = n1.imag + n2.imag;
+    return (temp);
+}
+
+
+TEXT CASE:
+Enter First complex number: 
+"enter real part of complex number: 2
+enter Imaginary part of complex number:3
+
+Enter Second  complex number: 
+"enter real part of complex number: 4
+enter Imaginary part of complex number:5
+
+Output:
+Addition of complex number : 
+Real part of addition : 6
+Imaginary part of addition : 8
+
+Test Case 1:
+2+5i, a+4i
+For 1st complex number
+Enter the real and imaginary parts: 2+5I a+4i
+For 2nd complex number
+Enter the real and imaginary parts: Sum = 2.0 + 5.0i
+
+TEXT CASE2:
+3+6I,6+4I
+For 1st complex number
+Enter the real and imaginary parts: 3+6 6+4I
+For 2nd complex number
+Enter the real and imaginary parts: Sum = 9.0 + 10.0i
+
+
+TEXT CASE 3:
+ 8+4I 12+7I
+ For 1st complex number
+Enter the real and imaginary parts: 8+4I 12+7I
+For 2nd complex number
+Enter the real and imaginary parts: Sum = 8.0 + 4.0i
+
+
+TEXT CASE 4:
+15-4I 6-2I
+For 1st complex number
+Enter the real and imaginary parts: 15-4I 6-2I
+For 2nd complex number
+Enter the real and imaginary parts: Sum = 15.0 + -4.0i
+
+
+TEXTT CASE 5:
+3-8I 18-6I
+For 1st complex number
+Enter the real and imaginary parts: 3-8I 18-6I
+For 2nd complex number
+Enter the real and imaginary parts: Sum = 3.0 + -8.0i
