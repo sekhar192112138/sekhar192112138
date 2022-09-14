@@ -1,0 +1,59 @@
+#include <stdio.h>
+long addTwoNumbers(long *, long *);
+ 
+int main()
+{
+   long fno, sno, sum;
+   
+   printf("\n\n Pointer : Add two numbers using call by reference:\n"); 
+   printf("\n");   
+ 
+   printf(" Input the first number : ");
+   scanf("%ld", &fno);
+   printf(" Input the second  number : ");
+   scanf("%ld", &sno);   
+   sum = addTwoNumbers(&fno, &sno);
+   printf(" The sum of %ld and %ld  is %ld\n\n", fno, sno, sum);
+   return 0;
+}
+long addTwoNumbers(long *n1, long *n2) 
+{
+   long sum;
+   sum = *n1 + *n2;
+   return sum;
+}
+
+
+         TEST CASE 1
+         Pointer : Add two numbers using call by reference:
+         Input the first number : 0
+         Input the second  number : 4
+         The sum of 0 and 4  is 4
+         
+         
+         TEST CASE 2
+         Pointer : Add two numbers using call by reference:
+         Input the first number : 5
+         Input the second  number : 0
+         The sum of 5 and 0  is 5
+         
+         
+         TEST CASE 3
+         Pointer : Add two numbers using call by reference:
+         Input the first number : -3
+         Input the second  number : 3
+         The sum of -3 and 3  is 0
+         
+         
+         TEST CASE 4
+         Pointer : Add two numbers using call by reference:
+         Input the first number : 0
+         Input the second  number : 0
+         The sum of 0 and 0  is 0
+         
+         
+         TEST CASE 5
+         Pointer : Add two numbers using call by reference:
+         Input the first number : 123
+         Input the second  number : 123
+         The sum of 123 and 123  is 246
