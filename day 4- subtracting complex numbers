@@ -1,0 +1,55 @@
+#include <stdio.h>
+ 
+struct complex
+{
+   int r, i;
+};
+ 
+int main()
+{
+   struct complex a, b, c;
+
+   printf("Enter the value a and b of the first complex number (a + ib): ");
+   scanf("%d%d", &a.r, &a.i);
+   printf("Enter the value c and d of the second complex number (c + id): ");
+   scanf("%d%d", &b.r, &b.i);
+ 
+   c.r = a.r - b.r;
+   c.i = a.i - b.i;
+   
+   if (c.i >= 0)
+  printf("Difference of the complex numbers = %d + %di", c.r, c.i);
+   else
+  printf("Difference of the complex numbers = %d %di", c.r, c.i);
+ 
+   return 0;
+}
+
+
+text case 1:
+2+5i a+4i
+Enter the value a and b of the first complex number (a + ib): 2+5i a+4i
+Enter the value c and d of the second complex number (c + id): Difference of the complex numbers = 2 + 5i
+
+
+text case 2:
+3+6i 6+4i
+Enter the value a and b of the first complex number (a + ib): 3+6i 6+4i
+Enter the value c and d of the second complex number (c + id): Difference of the complex numbers = 3 + 6i
+
+text case 3 :
+8+4i 12+7i
+Enter the value a and b of the first complex number (a + ib): 8+4i 12+7i
+Enter the value c and d of the second complex number (c + id): Difference of the complex numbers = 8 + 4i
+
+
+text case 4:
+15-4i 6-2i
+Enter the value a and b of the first complex number (a + ib): 15-4i 6-2i
+Enter the value c and d of the second complex number (c + id): Difference of the complex numbers = 15 -4i
+
+
+text case 5:
+3-8i 8-6i
+Enter the value a and b of the first complex number (a + ib): 3-8i 8-6i
+Enter the value c and d of the second complex number (c + id): Difference of the complex numbers = 3 -8i
