@@ -1,0 +1,48 @@
+#include<stdio.h>
+struct sum
+{
+	int a;int b;int c;int d; int e;float n;float m;
+};
+int main()
+{
+	int p;
+	printf("\n 1 for addition");
+	printf("\n 2 for subraction");
+	printf("\n 3 for multiplication");
+	printf("\n 4 for division");
+	printf("\nenter the choice= ");
+	scanf("%d",&p);
+	struct sum s;
+	printf("\ENTER THE FIRST COMPLEX NUMBER\n");
+	printf("\n ENTER THE REAL PART OF COMPLEX NUMBER= ");
+	scanf("%d",&s.a);
+	printf("ENTER THE IMAGINARY PART OF COMPLEX NUMBER= ");
+	scanf("%d",&s.b);
+	printf("\nENTER THE SECOUND  COMPLEX NUMBER\n");
+	printf(" ENTER THE REAL PART OF COMPLEX NUMBER= ");
+	scanf("%d",&s.c);
+	printf("ENTER THE IMAGINARY PART OF COMPLEX NUMBER= ");
+	scanf("%d",&s.d);
+	if (p==1){
+	s.n=s.a+s.c;
+	s.m=s.b+s.d;
+	printf("\nthe sum of real part= %f",s.n);
+	printf("\nthe sum of imaginary part is= %f",s.m);}
+	else if (p==2){
+	s.n=s.a-s.c;
+	s.m=s.b-s.d;
+	printf("\nthe result of real part= %f",s.n);
+	printf("\nthe result of imaginary part is= %f",s.m);}
+	else if (p==3){
+	s.n=s.a*s.c;
+	s.m=s.b*s.d;
+	printf("\nthe sum of real part= %f",s.n);
+	printf("\nthe sum of imaginary part is= %f",s.m);}
+	else if (p==4){
+	s.n=s.a/s.c;
+	s.m=s.b/s.d;
+	printf("\nthe sum of real part= %f",s.n);
+	printf("\nthe sum of imaginary part is= %f",s.m);}
+	else{
+	printf("invaild choice");}
+}
