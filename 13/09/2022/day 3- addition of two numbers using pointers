@@ -1,0 +1,44 @@
+#include <stdio.h>
+int main()
+{
+    int first, second, *p, *q, sum;    
+    printf("Enter two integers to add\n");
+    scanf("%d%d", &first, &second);    
+    p = &first;
+    q = &second;    
+    sum = *p + *q;    
+    printf("Sum of entered numbers = %d\n",sum);    
+    return 0;
+}
+
+    TEST CASE 1 
+     x=0 n=4 
+     Enter two integers to add
+     0
+     4
+     Sum of entered numbers = 4
+
+     TEST CASE 2
+     x=5 n=0
+     Enter two integers to add
+     5
+     0
+     Sum of entered numbers = 5
+
+     TEST CASE 3
+     Enter two integers to add
+     -3
+     3
+     Sum of entered numbers = 0
+     
+     TEST CASE 4
+     Enter two integers to add
+     0
+     0
+     Sum of entered numbers = 0
+     
+     TEST CASE 5
+     Enter two integers to add
+     123
+     123
+     Sum of entered numbers = 246
