@@ -1,0 +1,48 @@
+#include<stdio.h>
+ 
+void findFactorial(int,int *);
+int main(){
+  int i,factorial,num;
+ 
+  printf("Enter a number: ");
+  scanf("%d",&num);
+ 
+  findFactorial(num,&factorial);
+  printf("Factorial of %d is: %d",num,factorial);
+ 
+  return 0;
+}
+ 
+void findFactorial(int num,int *factorial){
+    int i;
+ 
+    *factorial =1;
+ 
+    for(i=1;i<=num;i++)
+      *factorial=*factorial*i;
+}
+
+
+         TEST CASE 1
+         Enter a number: 0
+         Factorial of 0 is: 1
+         
+         
+         TEST CASE 2
+         Enter a number: -5
+         Factorial of -5 is: -120
+         
+         
+         TEST CASE 3
+         Enter a number: 1
+         Factorial of 1 is: 1
+         
+         
+         TEST CASE 4
+         Enter a number: 2
+         Factorial of 2 is: 2
+         
+         
+         TEST CASE 5
+         Enter a number: 5
+         Factorial of 5 is: 120
