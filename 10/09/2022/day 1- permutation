@@ -1,0 +1,90 @@
+#include<stdio.h>
+#include<string.h>
+#define N 10
+ 
+void print(int *num, int n)
+{
+    int i;
+    for ( i = 0 ; i < n ; i++)
+        printf("%d ", num[i]);
+    printf("\n");
+}
+int main()
+{
+    int num[N];
+    int *ptr;
+    int temp;
+    int i, n, j;
+    printf("\nHow many number you want to enter: ");
+        scanf("%d", &n);
+    printf("\nEnter a list of numbers to see all combinations:\n");
+    for (i = 0 ; i < n; i++)
+        scanf("%d", &num[i]);
+    for (j = 1; j <= n; j++) {
+        for (i = 0; i < n-1; i++) {
+            temp = num[i];
+            num[i] = num[i+1];
+            num[i+1] = temp;
+            print(num, n);
+	}
+    }
+    return 0;
+}
+
+
+How many number you want to enter: 3
+
+Enter a list of numbers to see all combinations:
+2 3 4
+3 2 4
+3 4 2
+4 3 2
+4 2 3
+2 4 3
+2 3 4
+
+
+How many number you want to enter: 2
+
+Enter a list of numbers to see all combinations:
+1 6
+6 1
+1 6
+
+
+How many number you want to enter: 4
+
+Enter a list of numbers to see all combinations:
+2 3 6 7
+3 2 6 7
+3 6 2 7
+3 6 7 2
+6 3 7 2
+6 7 3 2
+6 7 2 3
+7 6 2 3
+7 2 6 3
+7 2 3 6
+2 7 3 6
+2 3 7 6
+2 3 6 7
+
+
+How many number you want to enter: 3
+
+Enter a list of numbers to see all combinations:
+6 8 9
+8 6 9
+8 9 6
+9 8 6
+9 6 8
+6 9 8
+6 8 9
+
+
+How many number you want to enter: 2
+
+Enter a list of numbers to see all combinations:
+6 7
+7 6
+6 7
