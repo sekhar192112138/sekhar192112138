@@ -1,0 +1,26 @@
+#include<stdio.h>
+struct student 
+{
+	char title[10];char author[20];char subject[10];int bookid;
+}s[10];
+int main()
+{
+	int a,i;
+	printf("enter the number of  books");
+	scanf("%d",& a);
+	for(i=0;i<a;i++){
+	printf("enter the title = ");
+	scanf("%s",&s[i].title );
+	printf("enter the author = ");
+	scanf("%s",&s[i].author);
+	printf("enter the subject = ");
+	scanf("%s",&s[i].subject);
+	printf("enter the book id= ");
+	scanf("%d",&s[i].bookid);}
+	for (i=0;i<a;i++){
+	printf("\ntitle of the book= %s",s[i].title);
+	printf("\nauthor= %s",s[i].author);
+	printf("\nsubject =%s\n",s[i].subject);
+	printf("nookid=%d\n",s[i].bookid);}
+	return 0;
+}
