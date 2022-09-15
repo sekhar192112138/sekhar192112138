@@ -1,0 +1,53 @@
+#include<stdio.h>
+typedef struct{
+        float a;
+        float b;
+}Complex;
+Complex divide(Complex,Complex);
+int main(){
+    float a1,b1,a2,b2;
+    Complex x,y,z;
+    printf("Enter first complex number : ");
+    scanf("%f+%fi",&a1,&b1);
+    printf("\nEnter second complex number : ");
+    scanf("%f+%fi",&a2,&b2);
+    x.a = a1; x.b = b1;
+    y.a = a2; y.b = b2;
+    z = divide(x,y);
+    printf("After division: %f+%fi",z.a,z.b);
+    return 0;
+}
+Complex divide(Complex x,Complex y){
+    Complex z;
+    z.a = (x.a*y.a + x.b*y.b)/(y.a*y.a+y.b*y.b);
+    z.b = (x.b*y.a - x.a*y.b)/(y.a*y.a + y.b*y.b);
+    return z;
+}
+
+text case 1:
+2+5i a+4i
+Enter first complex number : 2+5i a+4i
+Enter second complex number : After division: 1.#INF00+-339816987032582680000000000000000000000.
+
+text case 2:
+3+6i 6+4i
+Enter first complex number : 3+6i 6+4i
+Enter second complex number : After division: 0.807692+0.461538i
+
+
+text case 3:
+8+4i 12+7i
+Enter first complex number : 8+4i 12+7i
+Enter second complex number : After division: 0.642487+-0.041451i
+
+
+text case 4:
+15-4i 6-2i
+Enter first complex number : 15-4i 6-2i
+Enter second complex number : After division: -3.750000+-0.000000i
+
+
+text case 5:
+3-8i 18-6i
+Enter first complex number : 3-8i 18-6i
+Enter second complex number : After division: -0.375000+-0.00000i
