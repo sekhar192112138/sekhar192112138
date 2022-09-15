@@ -1,0 +1,64 @@
+#include<stdio.h>
+int main()
+{
+    int a,b,c,d,e;
+    printf("enter the amount= ");
+    scanf("%d",& a);
+    printf("enter the duration= ");
+    scanf("%d",& b);
+    printf("1 for senior citizen\n");
+    printf("2 for not a senior citizen\n");
+    printf("enter the option from above= ");
+    scanf("%d",&d);
+    if (d==1)
+    {
+        c=a*b*12/100;
+        printf("the rate of intrest is =%d",c);
+    }
+    else if (d==2)
+    {
+        e=a*b*10/100;
+        printf("the rate of intrest is=%d",e);
+    }
+}
+
+
+enter the amount= 23000
+enter the duration= 2
+1 for senior citizen
+2 for not a senior citizen
+enter the option from above= 1
+the rate of intrest is =5520
+
+
+enter the amount= 2000
+enter the duration= 1
+1 for senior citizen
+2 for not a senior citizen
+enter the option from above= 1
+the rate of intrest is =240
+
+
+enter the amount= 300000
+enter the duration= 3
+1 for senior citizen
+2 for not a senior citizen
+enter the option from above= 1
+the rate of intrest is =108000
+
+
+
+enter the amount= 35000
+enter the duration= 2
+1 for senior citizen
+2 for not a senior citizen
+enter the option from above= 1
+the rate of intrest is =8400
+
+
+enter the amount= 25000
+enter the duration= 5
+1 for senior citizen
+2 for not a senior citizen
+enter the option from above= 1
+the rate of intrest is =15000
