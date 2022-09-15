@@ -1,0 +1,56 @@
+
+
+#include<stdio.h>
+int main()
+{
+    int a,b,c;
+    printf("enter the year= ");
+    scanf("%d",&a);
+    printf("enter the date= ");
+    scanf("%d",&b);
+    printf("enterthe month= ");
+    scanf("%d",&c);
+    if(a%4==0)
+{
+    printf("the date is lrap year");
+    
+}    
+  else  
+{
+    printf("the date is not a leap year");
+}
+}
+
+TEST CASE 1
+           enter the year= 1947
+           enter the date= 04
+           enter the month= 11
+           the date is not a leap year
+
+
+           TEST CASE 2
+           enter the year= 1936
+           enter the date= 11
+           enter the month= 15
+           the date is a leap year
+           
+           
+           TEST CASE 3
+           enter the year= 1996
+           enter the date= 31
+           enter the month= 45
+           the given date is invalid
+           
+           
+           TEST CASE 4
+           enter the year= 1947
+           enter the date= 64
+           enter the month= 09
+           the given date is invalid
+           
+           
+           TEST CASE 2
+           enter the year= 2000
+           enter the date= 00
+           enter the month= 00
+           the given date is invalid
