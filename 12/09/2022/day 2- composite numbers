@@ -1,0 +1,24 @@
+#include<stdio.h>                                                   
+void main()                                                                     
+{                                                                               
+  int i, j, limit, start;                                                              
+  int composite = 0;  
+  printf("enter the start number= ");
+  scanf("%d",& start);
+  printf("Enter limit: ");                                                      
+  scanf("%d", &limit);                                                          
+                                                                                
+  printf("Composite Numbers upto (%d): ", limit);                               
+  for(i = start;i <= limit;i++)                                                     
+  {                                                                             
+    composite = 0;                                                              
+    for(j = i-1; j > 1 ; j--)                                                   
+    {                                                                           
+       if(i%j == 0)                                                             
+         composite = 1;                                                         
+    }                                                                           
+    if(composite == 1)                                                          
+     printf("%d\t", i);                                                         
+  }                                                                             
+  printf("\n");                                                                 
+} 
