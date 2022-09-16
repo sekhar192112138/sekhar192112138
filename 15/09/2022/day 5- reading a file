@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+	FILE* f;
+	char statements[100];
+	f=fopen("D:\reading.txt","r");
+	while(!feof(f))
+	{
+		statements=fgets(*f);
+		printf("%s",statements);
+	}
+	fclose(f);
+}
