@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+	FILE *f;
+	char filename[10];
+	int id;
+	char name[20];
+	f=fopen("D:\exam.txt","w");
+	if (f==0)
+	{
+		printf("error in opening the file");
+	}
+	printf("enter the id= ");
+	scanf("%d",&id);
+	printf("enter the name= ");
+	scanf("%s",&name);
+	fprintf(f,"name= %s\n",name);
+	fprintf(f,"id= %d\n",id);
+	f=fopen("D:\exam.txt","r");
+	fclose(f);
+}
