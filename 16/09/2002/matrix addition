@@ -1,0 +1,37 @@
+#include <stdio.h>
+int main()
+{
+	int a[10][10],b[10][10],c[10][10],i,j,n,m,z;
+	printf("1 for integer matrix");
+	printf("\n2 for float matrix");
+	printf("\n3 for character matrix\n");
+	printf("enter the choice= ");
+	scanf("%d",&z);
+	if (z==1){
+	printf("enter the number of rows=");
+	scanf("%d",&n);
+	printf("enter the number of columns= ");
+	scanf("%d",& m);
+	printf("\nENTER VALUES FOR MATRIX A:\n");
+	for(i=0;i<n;i++)
+		for(j=0;j<m;j++)
+			scanf("%d",&a[i][j]);
+	printf("\n values in secound matrix;\n");
+	for(i=0;i<n;i++)
+		for(j=0;j<m;j++)
+			scanf("%d",&b[i][j]);
+	for(i=0;i<n;i++)
+		for(j=0;j<m;j++)
+			c[i][j]=a[i][j]+b[i][j];
+	printf("\nTHE VALUES OF MATRIX C ARE:\n");
+	for(i=0;i<n;i++)
+        {
+		for(j=0;j<m;j++)
+			printf("%5d",c[i][j]);
+		printf("\n");
+	}}
+	else
+	{
+		printf("only integer matrix are perfomed (re-enter the choice)");
+	}
+}
